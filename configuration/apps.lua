@@ -7,7 +7,7 @@ local rofi_command =
     "env /usr/bin/rofi -dpi " ..
     get_dpi() ..
         " -width " ..
-            with_dpi(400) ..
+            with_dpi(370) ..
                 " -show drun -sort -disable-history -theme " ..
                     filesystem.get_configuration_dir() ..
                         '/configuration/rofi.rasi -run-command "/bin/bash -c -i \'shopt -s expand_aliases; {cmd}\'"'
@@ -29,7 +29,7 @@ return {
         social = "telegram-desktop",
         game = "lutris",
         files = "nautilus -w",
-        music = "spotify"
+        music = "env LD_PRELOAD=/usr/local/lib/spotify-adblock.so spotify"
     },
     -- List of apps to start once on start-up
     run_on_start_up = {

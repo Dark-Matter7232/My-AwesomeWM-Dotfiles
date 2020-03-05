@@ -96,25 +96,25 @@ end
 local TopPanel = function(s, offset)
     local offsetx = 0
     if offset == true then
-        offsetx = dpi(48)
+        offsetx = dpi(42)
     end
     local panel =
         wibox(
         {
             ontop = true,
             screen = s,
-            height = dpi(48),
+            height = dpi(42),
             width = s.geometry.width - offsetx,
             x = s.geometry.x + offsetx,
             y = s.geometry.y,
             stretch = false,
             bg = beautiful.background.hue_800,
             fg = beautiful.fg_normal,
-            struts = {top = dpi(48)}
+            struts = {top = dpi(42)}
         }
     )
 
-    panel:struts({top = dpi(48)})
+    panel:struts({top = dpi(42)})
 
     panel:setup {
         layout = wibox.layout.align.horizontal,

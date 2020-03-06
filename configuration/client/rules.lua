@@ -44,22 +44,34 @@ awful.rules.rules = {
             skip_decoration = true
         }
     },
-    -- Floating applications
-    --{
-        --rule_any = {class = {"Yubico Authenticator"}},
-        --properties = {
-            --placement = awful.placement.bottom_left,
-            --floating = true,
-            --drawBackdrop = true,
-            --ontop = true,
-            --shape = function()
-                --return function(cr, w, h)
-                    --gears.shape.rounded_rect(cr, w, h, 8)
-                --end
-            --end,
-            --skip_decoration = true
-        --}
-    --},
+  {
+    -- For those programs that don't play nice in tiled mode
+    rule_any = {class = {'Android Studio', 'android-studio', 'android studio', 'android-dev', 'Android-Emulator', 'Emulator'}},
+    properties = {
+        size_hints_honor = false,
+        floating = true,
+    },
+  },
+    -- Titlebars
+  {
+    rule_any = {
+      type = {'dialog'},
+      instance = {'file_progress'}, -- For nemo
+      class = {'Nm-connection-editor', 'Ibus-setup', 'Pavucontrol'}
+    },
+    properties = {
+      placement = awful.placement.centered,
+      ontop = true,
+      floating = true,
+      drawBackdrop = true,
+      shape = function()
+        return function(cr, w, h)
+          gears.shape.rounded_rect(cr, w, h, 8)
+        end
+      end,
+      skip_decoration = true
+    }
+  },
     -- Browser
     {
         rule_any = {
@@ -72,7 +84,7 @@ awful.rules.rules = {
     -- Code
     {
         rule_any = {
-            class = {"code-oss", "subl", "Android Studio", "Sublime Text", "Sublime-Text", "Sublime", "Sublime text", "Sublime-text", "Meld", "PyCharm Community Edition", "Arduino IDE", "Arduino IDE(Arduino IDE)", "Arduino IDE (Arduino IDE)", "PyCharm", "Ghex"}
+            class = {"code-oss", "subl", "Sublime Text", "Sublime-Text", "Sublime", "Sublime text", "Sublime-text", "Meld", "PyCharm Community Edition", "Arduino IDE", "Arduino IDE(Arduino IDE)", "Arduino IDE (Arduino IDE)", "PyCharm", "Ghex", 'Android Studio'}
         },
         properties = {
             tag = "2"

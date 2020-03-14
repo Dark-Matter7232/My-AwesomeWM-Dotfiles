@@ -15,10 +15,10 @@ local rofi_command =
 return {
     -- List of apps to start by default on some actions
     default = {
-        terminal = "kitty",
+        terminal = "termite",
         rofi = rofi_command,
         lock = "i3lock-fancy",
-        quake = "kitty",
+        quake = "termite",
         screenshot = "~/.config/awesome/configuration/utils/screenshot -m",
         region_screenshot = "~/.config/awesome/configuration/utils/screenshot -r",
         delayed_screenshot = "sleep 10 ; ~/.config/awesome/configuration/utils/screenshot -r",
@@ -28,7 +28,7 @@ return {
         editor = "subl", -- gui text editor
         social = "telegram-desktop",
         game = "lutris",
-        files = "nautilus -w",
+        files = "thunar",
         music = "env LD_PRELOAD=/usr/local/lib/spotify-adblock.so spotify"
     },
     -- List of apps to start once on start-up

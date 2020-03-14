@@ -16,7 +16,7 @@ theme.primary = mat_colors.deep_orange
 theme.accent = mat_colors.pink
 
 -- Background
-theme.background = mat_colors.grey
+theme.background = mat_colors.hue_blue
 
 local awesome_overrides = function(theme)
     theme.dir = os.getenv("HOME") .. "/.config/awesome/theme"

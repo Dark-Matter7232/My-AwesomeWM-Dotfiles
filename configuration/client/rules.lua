@@ -84,7 +84,7 @@ awful.rules.rules = {
     -- Code
     {
         rule_any = {
-            class = {"code-oss", "subl", "Sublime Text", "Sublime-Text", "Sublime", "Sublime text", "Sublime-text", "Meld", "PyCharm Community Edition", "Arduino IDE", "Arduino IDE(Arduino IDE)", "Arduino IDE (Arduino IDE)", "PyCharm", "Ghex", 'Android Studio'}
+            class = {"code-oss", "subl", "Sublime Text", "Sublime-Text", "Sublime", "Sublime text", "Sublime-text", "Meld", "PyCharm Community Edition", "Arduino IDE", "Arduino IDE(Arduino IDE)", "Arduino IDE (Arduino IDE)", "PyCharm", "Ghex", 'Android Studio', "IntelliJ IDEA Coomunity Edition"}
         },
         properties = {
             tag = "2"
@@ -112,7 +112,7 @@ awful.rules.rules = {
     -- Media
     {
         rule_any = {
-            class = {"spotify", "Spotify", "Spotify Free", "VLC Media Player", "VLC media player", "Spotify(adblock)", "VLC", "Vlc"}
+            class = {"spotify", "Spotify", "Spotify Free", "VLC Media Player", "VLC media player", "Spotify(adblock)", "VLC", "Vlc", "Spotify Premium"}
         },
         properties = {
             tag = "6"

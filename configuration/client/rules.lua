@@ -87,6 +87,7 @@ awful.rules.rules = {
             class = {"code-oss", "subl", "Sublime Text", "Sublime-Text", "Sublime", "Sublime text", "Sublime-text", "Meld", "PyCharm Community Edition", "Arduino IDE", "Arduino IDE(Arduino IDE)", "Arduino IDE (Arduino IDE)", "PyCharm", "Ghex", 'Android Studio', "IntelliJ IDEA Coomunity Edition"}
         },
         properties = {
+            skip_decoration = true,
             tag = "2"
         }
     },
@@ -106,13 +107,17 @@ awful.rules.rules = {
             name = {"Lutris"}
         },
         properties = {
+            skip_decoration = true,
+			draw_backdrop = false,
+			switchtotag = true,
+			floating = true,
             tag = "4"
         }
     },
     -- Media
     {
         rule_any = {
-            class = {"spotify", "Spotify", "Spotify Free", "VLC Media Player", "VLC media player", "Spotify(adblock)", "VLC", "Vlc", "Spotify Premium"}
+            class = {"spotify", "Spotify", "Spotify Free", "VLC Media Player", "VLC media player", "Spotify(adblock)", "VLC", "Vlc", "Spotify Premium(Music Player)"}
         },
         properties = {
             tag = "6"

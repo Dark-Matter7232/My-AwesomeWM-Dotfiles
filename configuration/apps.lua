@@ -25,11 +25,11 @@ return {
         -- Editing these also edits the default program
         -- associated with each tag/workspace
         browser = "brave",
-        editor = "subl", -- gui text editor
+        editor = "code", -- gui text editor
         social = "telegram-desktop",
         game = "lutris",
         files = "thunar",
-        music = "env LD_PRELOAD=/usr/local/lib/spotify-adblock.so spotify"
+        music = "env LD_PRELOAD=/usr/lib/spotify-adblock.so spotify %U"
     },
     -- List of apps to start once on start-up
     run_on_start_up = {
